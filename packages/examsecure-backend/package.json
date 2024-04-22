@@ -4,9 +4,9 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "aws-sdk": "^2.680.0",
-    "uuid": "^8.1.0",
-    "node-fetch": "^2.6.1"
+    "aws-sdk": "^2.1603.0",
+    "node-fetch": "^2.6.1",
+    "uuid": "^8.1.0"
   },
   "scripts": {
     "build": "echo \"no build script defined for examsecure-backend yet\"",

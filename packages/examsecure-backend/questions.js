@@ -1,7 +1,30 @@
 global.fetch = require('node-fetch');
 
-const { firebaseApiKey } = process.env;
+const firebaseApiKey = 'AIzaSyBDpRAq-bM-El7_YUiyV6WVFaaNgT7ubnU';
 
+const getToken = async () => {
+  return await fetch(
+    'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBDpRAq-bM-El7_YUiyV6WVFaaNgT7ubnU',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: 'es@rajrajhans.com',
+        password: 'password',
+        returnSecureToken: true,
+      }),
+    },
+  )
+    .then(async (response) => {
+      return (await response.json()).idToken;
+    })
+    .catch((err) => console.log(err));
+};
+(async () => {
+  console.log(await main());
+})();
 const respond = (httpStatusCode, response) => ({
   isBase64Encoded: false,
   statusCode: httpStatusCode,

@@ -4,7 +4,7 @@ Transform: AWS::Serverless-2016-10-31
 
 Globals:
   Function:
-    Runtime: nodejs12.x
+    Runtime: nodejs16.x
     MemorySize: 128
     Timeout: 30
     Environment:
@@ -107,12 +107,6 @@ Outputs:
     Description: ExamSecure URL
 Resources:
 
-  SetupRekognitionAndWebUI:
-    Type: Custom::Setup
-    Properties:
-      ServiceToken: !GetAtt LambdaSetup.Arn
-      Region: !Ref AWS::Region
-
   WebUIBucket:
     Type: AWS::S3::Bucket
     Properties:
@@ -191,7 +185,6 @@ Resources:
 
   CognitoUserPoolUser:
     Type: AWS::Cognito::UserPoolUser
-    DependsOn: SetupRekognitionAndWebUI
     Properties:
       Username: !Ref AdminEmail
       UserPoolId: !Ref CognitoUserPool
@@ -223,7 +216,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.indexHandler
-      CodeUri: s3://examsecurelambdas/
+      CodeUri: s3://examsecurelambdas/deploy.zip
       Events:
         Get:
           Type: Api
@@ -240,7 +233,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.processHandler
-      CodeUri: s3://examsecurelambdas/
+      CodeUri: s3://examsecurelambdas/deploy.zip
       Events:
         Get:
           Type: Api
@@ -258,7 +251,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://eslambdasetup/
+      CodeUri: s3://eslambdasetup/deploy.zip
       Description: Custom Lambda resource for the ExamSecure Cloudformation Stack
       Environment:
         Variables:

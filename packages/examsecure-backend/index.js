@@ -23,6 +23,11 @@ const respond = (statusCode, response) => ({
   },
 });
 
+exports.handler = (event) =>
+  respond(200, {
+    data: 'testing',
+  });
+
 exports.indexHandler = async (event) => {
   const ExternalImageId = uuid();
   const body = JSON.parse(event.body);

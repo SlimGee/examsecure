@@ -1,7 +1,7 @@
 window.rekognitionSettings = {
-  apiGateway: "https://udy9ndd9i6.execute-api.us-east-1.amazonaws.com/Prod/",
-  cognitoIdentityPool: "us-east-1:53743ec7-fb8b-45ae-a032-efb70d2472f9",
-  cognitoUserPoolId: "us-east-1_9B8sBnlzc",
-  cognitoUserPoolClientId: "5qiqchrrna9usmc1ji02dbncs1",
-  region: "us-east-1",
+  apiGateway: 'https://2p0jzszv7h.execute-api.us-east-2.amazonaws.com/Prod',
+  cognitoIdentityPool: 'us-east-2:98e6c3e9-7469-4814-a971-317453c2f9ba',
+  cognitoUserPoolId: 'us-east-2_tZTcP7psl',
+  cognitoUserPoolClientId: '5a4526rdblnj0jkse96sr06gpa',
+  region: 'us-east-1',
 };

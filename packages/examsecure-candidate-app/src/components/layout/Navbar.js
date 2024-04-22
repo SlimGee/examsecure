@@ -14,7 +14,6 @@ const ESNavbar = ({ isSignedIn }) => {
       className={'navContainer'}
       expand={'lg'}
       collapseOnSelect={true}
-      activeKey={history.location.pathname}
     >
       <Navbar.Brand style={{ display: 'flex', alignContent: 'center' }}>
         <Link to={'/'} style={{ textDecoration: 'none' }}>
