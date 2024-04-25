@@ -104,9 +104,10 @@ Note: Running this project will require you to set up and configure
 the required AWS resources.
 
 1. Clone the project.
-2. Run `npm install` to install all required dependencies.
+2. Run `yarn install` to install all required dependencies.
 3. Configure AWS and put required details in `public/settings.js`.
-4. Run `npm start`.
+4. Run `yarn start-candidate-app`.
+run `yarn start-educator-app` to start the educator app.
 
 The project should run now. In case of any error, make sure your AWS configuration is correct. 
 
