@@ -10,15 +10,14 @@ import LoadingSpinner from '../../../helpers/LoadingSpinner';
 const ProctorDashboard = ({ test }) => {
   const [isDetailsModalVisible, setIsDetailsModalVisible] = useState(false);
   const [detailsFlagRecord, setDetailsFlagRecord] = useState(undefined);
-  const [isDisqualifyModalVisible, setIsDisqualifyModalVisible] = useState(
-    false,
-  );
+  const [isDisqualifyModalVisible, setIsDisqualifyModalVisible] =
+    useState(false);
   const [flaggedImages, setFlaggedImages] = useState([]);
 
   useEffect(() => {
     if (test) {
       setFlaggedImages(
-        Object.entries(test.flagged_candidates)
+        Object.entries(test.flagged_candidates || {})
           .map(([k, v]) =>
             Object.entries(v).map(([key, val]) => {
               val.candidate_name = test?.candidates[k].candidateName;

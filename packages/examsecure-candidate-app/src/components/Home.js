@@ -50,12 +50,7 @@ export default () => {
           subheading={'Detects loss of attention from the screen'}
           imageSrc={headposepng}
         />
-        <FeaturesTwoColSection4
-          textOnLeft={true}
-          heading={'Feature Rich Educator Interface'}
-          subheading={'Realtime Exam Monitoring'}
-          imageSrc={educator_interface}
-        />
+
         <FAQ
           heading={
             <>

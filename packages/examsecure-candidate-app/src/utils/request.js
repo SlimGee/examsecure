@@ -34,6 +34,6 @@ export default (url, method, data) =>
   retryWrapper(() =>
     API[method || 'get']('apiGateway', url, {
       body: data || undefined,
-      headers: { 'Content-Type': 'application/json' },
+      //headers: { 'Content-Type': 'application/json' },
     }),
   );

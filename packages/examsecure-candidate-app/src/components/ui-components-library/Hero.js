@@ -74,16 +74,16 @@ export default ({
                 onClick={() => history.push('/selectQuestionSet')}
                 style={{ marginRight: '20px' }}
               >
-                Try out as a Candidate
+                Login as a Candidate
               </PrimaryButton>
 
               <PrimaryButton
                 as="a"
                 css={buttonRoundedCss}
                 className={'heroSectionButton heroSectionButtonSecondary'}
-                href={'https://examsecure-educator.rajrajhans.com'}
+                href={'#'}
               >
-                Try out as an Educator
+                Login as an Instructor
               </PrimaryButton>
 
               <FeatureList>

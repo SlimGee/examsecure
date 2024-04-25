@@ -27,14 +27,6 @@ const ESNavbar = ({ isSignedIn }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className={'justify-content-end'}>
         <Nav>
-          <Nav.Link as={Link} to={'/demoVideos'} eventKey={'/demoVideos'}>
-            Demo Videos
-          </Nav.Link>
-
-          <Nav.Link as={Link} to={'/demo'} eventKey={'/demo'}>
-            Image Analysis Demo
-          </Nav.Link>
-
           {isSignedIn ? (
             <>
               <Nav.Link

@@ -22,9 +22,7 @@ const getToken = async () => {
     })
     .catch((err) => console.log(err));
 };
-(async () => {
-  console.log(await main());
-})();
+
 const respond = (httpStatusCode, response) => ({
   isBase64Encoded: false,
   statusCode: httpStatusCode,
